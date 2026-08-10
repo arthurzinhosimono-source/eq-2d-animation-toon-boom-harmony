@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="3" open-gous="true" top-node="Top">
+  <metadata>
+    <project-name>EQ 2D Animation: Ang Kawanihan ng mga Banal na Pants ng Alyansa ng Kalungkutan ng Maya</project-name>
+    <fps>24</fps>
+    <start-frame>1</start-frame>
+    <end-frame>5232</end-frame>
+    <resolution width="1920" height="1080" fov="41.112090437168325"/>
+  </metadata>
+
+  <nodes>
+    <!-- Master Composite -->
+    <node type="COMPOSITE" name="Composite" x="0" y="500">
+      <input name="In_BG"/>
+      <input name="In_Characters"/>
+      <input name="In_Props"/>
+      <input name="In_FX"/>
+    </node>
+
+    <!-- Camera Node with Shaker FX for Earthquake -->
+    <node type="CAMERA" name="Main_Camera" x="-200" y="0">
+      <property name="position" val="0,0,0"/>
+      <property name="zoom" val="1.0"/>
+    </node>
+
+    <!-- Background Layer Element Node -->
+    <node type="READ" name="BG_Layer" x="-300" y="200">
+      <property name="element" val="Backgrounds"/>
+      <property name="drawing" val="BG_ApartmentRidge"/>
+    </node>
+
+    <!-- Character Nodes -->
+    <node type="READ" name="Mommy_Maya" x="-100" y="200">
+      <property name="element" val="Mommy_Maya"/>
+      <property name="drawing" val="Maya_PurpleDress"/>
+    </node>
+
+    <node type="READ" name="Daddy_Roman" x="0" y="200">
+      <property name="element" val="Daddy_Roman"/>
+      <property name="drawing" val="Roman_PinkShirt"/>
+    </node>
+
+    <node type="READ" name="Baby_Jimmy" x="100" y="200">
+      <property name="element" val="Baby_Jimmy"/>
+      <property name="drawing" val="Jimmy_EQDiaper"/>
+    </node>
+
+    <!-- Special FX: Earthquake Shake -->
+    <node type="CAMERA_SHAKE" name="FX_Earthquake" x="-200" y="300">
+      <property name="intensity" val="5.0"/>
+      <property name="enabled" val="false"/>
+    </node>
+
+    <!-- Teleport Effect Overlay -->
+    <node type="READ" name="FX_Teleport_Glow" x="200" y="200">
+      <property name="element" val="FX"/>
+      <property name="drawing" val="Teleport_BlueLight"/>
+    </node>
+  </nodes>
+
+  <timeline>
+    <!-- Scene Markers & Cut Timings -->
+    <marker frame="1" name="Panimula (0:05)" color="#FF0000"/>
+    <marker frame="312" name="Eksena 0:13" color="#00FF00"/>
+    <marker frame="600" name="Eksena 0:25" color="#00FF00"/>
+    <marker frame="864" name="Eksena 0:36" color="#00FF00"/>
+    <marker frame="912" name="Eksena 0:38" color="#00FF00"/>
+    <marker frame="1032" name="Eksena 0:43" color="#00FF00"/>
+    <marker frame="1200" name="Eksena 0:50" color="#00FF00"/>
+    <marker frame="1392" name="Eksena 0:58" color="#00FF00"/>
+    <marker frame="1440" name="Eksena 1:00" color="#00FF00"/>
+    <marker frame="1512" name="Eksena 1:03" color="#00FF00"/>
+    <marker frame="1536" name="Eksena 1:04" color="#00FF00"/>
+    <marker frame="1680" name="Eksena 1:10" color="#00FF00"/>
+    <marker frame="1776" name="Eksena 1:14" color="#00FF00"/>
+    <marker frame="1800" name="Eksena 1:15" color="#00FF00"/>
+    <marker frame="1848" name="Eksena 1:17" color="#00FF00"/>
+    <marker frame="1992" name="Eksena 1:23" color="#00FF00"/>
+    <marker frame="2184" name="Eksena 1:31" color="#00FF00"/>
+    <marker frame="2352" name="Eksena 1:38" color="#00FF00"/>
+    <marker frame="2448" name="Eksena 1:42" color="#00FF00"/>
+    <marker frame="2544" name="Eksena 1:46" color="#00FF00"/>
+    <marker frame="2664" name="Eksena 1:51" color="#00FF00"/>
+    <marker frame="2712" name="Eksena 1:53" color="#00FF00"/>
+    <marker frame="2760" name="Eksena 1:55" color="#00FF00"/>
+    <marker frame="2808" name="Eksena 1:57" color="#00FF00"/>
+    <marker frame="2856" name="Eksena 1:59" color="#00FF00"/>
+    <marker frame="2880" name="Eksena 2:00" color="#00FF00"/>
+    <marker frame="2928" name="Eksena 2:02" color="#00FF00"/>
+    <marker frame="3024" name="Eksena 2:06" color="#00FF00"/>
+    <marker frame="3144" name="Eksena 2:11" color="#00FF00"/>
+    <marker frame="3288" name="Eksena 2:17" color="#00FF00"/>
+    <marker frame="3432" name="Eksena 2:23" color="#00FF00"/>
+    <marker frame="3552" name="Eksena 2:28" color="#00FF00"/>
+    <marker frame="3696" name="Eksena 2:34" color="#00FF00"/>
+    <marker frame="3744" name="Eksena 2:36" color="#00FF00"/>
+    <marker frame="3792" name="Eksena 2:38" color="#00FF00"/>
+    <marker frame="3960" name="Eksena 2:45" color="#00FF00"/>
+    <marker frame="4008" name="Eksena 2:47" color="#00FF00"/>
+    <marker frame="4080" name="Eksena 2:50" color="#00FF00"/>
+    <marker frame="4104" name="Eksena 2:51" color="#00FF00"/>
+    <marker frame="4272" name="Eksena 2:58" color="#00FF00"/>
+    <marker frame="4344" name="Eksena 3:01" color="#00FF00"/>
+    <marker frame="4464" name="Eksena 3:06" color="#00FF00"/>
+    <marker frame="4728" name="Eksena 3:17" color="#00FF00"/>
+    <marker frame="5016" name="Eksena 3:29" color="#00FF00"/>
+    <marker frame="5112" name="Eksena 3:33" color="#00FF00"/>
+    <marker frame="5232" name="Wakas (3:38)" color="#FF0000"/>
+  </timeline>
+</project>
